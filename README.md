@@ -129,6 +129,14 @@ Set the base URL:
 BASE_URL=http://127.0.0.1:8000
 ```
 
+For the deployed Railway API, use:
+
+```bash
+BASE_URL=https://web-production-b639d.up.railway.app
+```
+
+The numeric IDs in the examples match a fresh local seed. On the live Railway database, demo accounts are seeded and working, but IDs may differ because deployment smoke checks can create extra rows. For live testing, use the returned IDs from create endpoints or inspect `/docs`.
+
 ### POST /auth/signup
 
 ```bash
@@ -307,9 +315,12 @@ Partially done:
 Skipped:
 
 - Alembic migrations.
-- Public deployment from this environment.
 - Trainer assignment management endpoint. Seed data and trainer-created batches cover assigned trainers.
 - Refresh tokens and token blacklist storage.
+
+One thing I would do differently with more time:
+
+- Add Alembic migrations early instead of relying on startup table creation. It is fine for this prototype, but migrations would make deployed schema changes safer and easier to review.
 
 ## Security Notes
 
