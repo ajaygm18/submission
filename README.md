@@ -4,11 +4,11 @@ SkillBridge is a command-line-first FastAPI backend for a prototype attendance m
 
 ## Live API Base URL
 
-Deployment status: not deployed from this local environment.
+Deployment status: deployed on Railway with Railway PostgreSQL.
 
-Live base URL placeholder: `https://<your-render-or-railway-app>.onrender.com`
+Live base URL: `https://web-production-b639d.up.railway.app`
 
-The code is deployment-ready for Railway, Render, Fly.io, or a similar platform. Set the environment variables from `.env.example`, point `DATABASE_URL` at PostgreSQL, and use this startup command:
+The code is also deployment-ready for another Railway, Render, Fly.io, or similar environment. Set the environment variables from `.env.example`, point `DATABASE_URL` at PostgreSQL, and use this startup command:
 
 ```bash
 uvicorn src.main:app --host 0.0.0.0 --port $PORT
