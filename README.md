@@ -2,6 +2,19 @@
 
 SkillBridge is a command-line-first FastAPI backend for a prototype attendance management system. It implements JWT login, role-based access control, batch invite joins, session creation, attendance marking, summary reports, and a separate scoped token for Monitoring Officer read-only access.
 
+## Tech Stack
+
+- Python 3
+- FastAPI
+- SQLAlchemy ORM
+- PostgreSQL on Railway for deployment
+- SQLite for local default/test convenience
+- PyJWT for JWT creation and validation
+- passlib with bcrypt for password hashing
+- Pydantic Settings / dotenv-style environment configuration
+- pytest with FastAPI TestClient for tests
+- Uvicorn as the ASGI server
+
 ## Live API Base URL
 
 Deployment status: deployed on Railway with Railway PostgreSQL.
