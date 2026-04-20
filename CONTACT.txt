@@ -1,0 +1,6 @@
+Full Name: <Your Full Name>
+Email: <your.email@example.com>
+Phone: <Your Phone Number>
+GitHub profile link: https://github.com/<your-username>
+Most challenging part: <One sentence about the most challenging part of the build.>
+
