@@ -373,3 +373,7 @@ python -m src.seed
 ```
 
 If platform shell access is unavailable, seed locally against the managed PostgreSQL URL by setting `DATABASE_URL` in `.env` and running the same command.
+
+Deployment issue encountered and fixed:
+
+- Railway initially installed a newer `bcrypt` release that was incompatible with `passlib==1.7.4` during password hashing on signup. The fix was to pin `bcrypt==4.2.1` in `requirements.txt`, redeploy, and then seed the Railway PostgreSQL database. After that, signup, login, seeded accounts, and monitoring-token flow were verified against the live API.
